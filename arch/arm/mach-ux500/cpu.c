@@ -28,6 +28,10 @@
 
 #include "clock.h"
 
+#ifdef CONFIG_KEXEC_HARDBOOT
+#include <asm/kexec.h>
+#endif
+
 void __iomem *_PRCMU_BASE;
 
 #ifdef CONFIG_CACHE_L2X0
@@ -282,3 +286,4 @@ static int __init ux500_sys_soc_init(void)
 
 module_init(ux500_sys_soc_init);
 #endif
+
