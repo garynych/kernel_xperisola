@@ -15,18 +15,6 @@
 #define PLAT_PHYS_OFFSET	UL(0x00000000)
 #define BUS_OFFSET	UL(0x00000000)
 
-#if defined(CONFIG_MACH_U8500_LOTUS) || defined(CONFIG_MACH_U8500_PEPPER)
-#define END_MEM		            UL(0x1FE00000)
-#endif
-
-#if defined(CONFIG_KEXEC_HARDBOOT)
-#if defined(CONFIG_MACH_U8500_LOTUS) || defined(CONFIG_MACH_U8500_PEPPER)
-#define KEXEC_HB_PAGE_ADDR		UL(0x1FE00000)
-#else
-#error "Adress for kexec hardboot page not defined"
-#endif
-#endif
-
 #ifdef CONFIG_UX500_PASR
 #define PASR_SECTION_SZ_BITS	26 /* 64MB sections */
 #define PASR_SECTION_SZ	(1 << PASR_SECTION_SZ_BITS)

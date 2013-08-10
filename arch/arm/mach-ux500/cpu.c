@@ -28,10 +28,6 @@
 
 #include "clock.h"
 
-#ifdef CONFIG_KEXEC_HARDBOOT
-#include <asm/kexec.h>
-#endif
-
 void __iomem *_PRCMU_BASE;
 
 #ifdef CONFIG_CACHE_L2X0
