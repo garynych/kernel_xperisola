@@ -23,6 +23,14 @@ obj-$(CONFIG_CPU_FREQ_GOV_LIONHEART)   	+= cpufreq_lionheart.o
 obj-$(CONFIG_CPU_FREQ_GOV_INTELLIDEMAND)	+= cpufreq_intellidemand.o
 obj-$(CONFIG_CPU_FREQ_GOV_DYNAMIC_INTERACTIVE)	+= cpufreq_dynamic_interactive.o
 
+# Custom governors
+obj-$(CONFIG_CPU_FREQ_GOV_ZZMOOVE)	+= cpufreq_zzmoove.o
+obj-$(CONFIG_CPU_FREQ_GOV_HOTPLUGX)	+= cpufreq_hotplugx.o
+obj-$(CONFIG_CPU_FREQ_GOV_HYPER)  	+= cpufreq_HYPER.o
+obj-$(CONFIG_CPU_FREQ_GOV_LAGFREE)      += cpufreq_lagfree.o
+
+
+
 # CPUfreq cross-arch helpers
 obj-$(CONFIG_CPU_FREQ_TABLE)		+= freq_table.o
 
